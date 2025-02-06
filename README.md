@@ -1,110 +1,74 @@
-## Stackoverflow Clone
- - Live: http://clone-of-stackoverflow.vercel.app/
+Stack Overflow Clone
+A simple clone of the Stack Overflow platform, designed to provide a question and answer forum for developers. The app allows users to post questions, answers, and upvote/downvote content, mimicking the functionality of Stack Overflow.
 
-This project is a simplified a full stack clone of Stackoverflow. I wrote it to learn more about Nodejs, React/Next, pixel perfect design and NoSQL databases in general. Feel free to contribute!
+Features
+User Authentication: Users can sign up, log in, and manage their profile.
+Post Questions: Users can post new questions with titles, descriptions, and tags.
+Answer Questions: Users can reply to questions with detailed answers.
+Upvote/Downvote: Users can vote on both questions and answers.
+Search Functionality: Users can search for questions and answers based on keywords or tags.
+Tagging: Questions can be tagged to categorize topics.
+User Profiles: Users have their own profiles to track their posted questions, answers, and voting history.
+Responsive UI: The app has a responsive interface for optimal viewing on both desktop and mobile devices.
+Tech Stack
+Frontend: React, Redux, CSS (or a CSS framework like Bootstrap/Tailwind CSS)
+Backend: Node.js, Express (or any server-side technology you're using)
+Database: MongoDB (or any database of your choice, like PostgreSQL, MySQL)
+Authentication: JWT (JSON Web Token) for secure user login
+Hosting: Heroku, Netlify, or any preferred cloud platform for deployment
+Installation
+Prerequisites
+Make sure you have the following installed on your system:
 
-## :rocket: Tech Stack
+Node.js
+npm/yarn
+MongoDB (if using MongoDB)
+Steps
+Clone the repository:
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/stackoverflow-clone.git
+Navigate to the project folder:
+bash
+Copy
+Edit
+cd stackoverflow-clone
+Install dependencies for both the frontend and backend:
+For backend:
+bash
+Copy
+Edit
+cd backend
+npm install
+For frontend:
+bash
+Copy
+Edit
+cd frontend
+npm install
+Set up environment variables (like database URL, JWT secret, etc.) in the .env file.
+Start the server and frontend:
+Backend:
+bash
+Copy
+Edit
+cd backend
+npm start
+Frontend:
+bash
+Copy
+Edit
+cd frontend
+npm start
+Usage
+After starting the app, you can visit the frontend in your browser at http://localhost:3000.
+Sign up or log in to start posting questions, answering others, and interacting with content.
+Contributing
+Feel free to fork the repository and make contributions! To submit a contribution, please follow these steps:
 
-- ReactJs
-- NextJs
-- Storybook
-- PostCSS
-- NodeJs
-- Express
-- MongoDB
-- Mongoose
-
-## :warning: Prerequisite
-
-- node
-- npm
-- mongodb
-
-## :cd: How to run local
-
-```bash
-# Clone this repository
-$ git clone https://github.com/salihozdemir/stackoverflow-clone
-
-# Go into the repository
-$ cd stackoverflow-clone
-
-# Go into server
-$ cd server
-
-# Start mongodb locally
-$ mongod
-
-# Install dependencies
-$ npm install
-
-# Start the backend server
-$ npm run dev
-
-# On another terminal, go to the client folder
-$ cd ../client
-
-# Install dependencies
-$ npm install
-
-# Use the command below for Android devices
-$ npm run dev
-
-# To see the incomplete storybook components
-npm run storybook
-```
-
-## :mag_right: Testing
-
-Make sure mongodb is running before testing the server.
-
-```bash
-$ cd server
-$ yarn test
-```
-
-<sub>There are missing tests on the server side and there are no tests on the client side yet.</sub>
-
-## :globe_with_meridians: Deploy
-
-#### Deploying Server App on Heroku
-
--  You will need to have setup a [MongoDB Atlas account and database](https://docs.atlas.mongodb.com/getting-started/).
-- Make sure that the cluster has allowlisted connections from anywhere.
-- Create a [Heroku](https://dashboard.heroku.com/new-app) new app.
-- Go to app settings
-- Add the following enviroments.
-  - DATABASE_URL (to use your MongoDB connection string)
-  - JWT_SECRET
-- Add Nodejs to buildpacks
-
-- 
-        # Go into the repository
-        $ cd stackoverflow-clone
-
-        # Heroku Setup
-        $ npm install -g heroku
-        $ heroku login
-        $ heroku git:remote -a your-app-name
-
-        # push subdirectory repository with subtree
-        $ git subtree push --prefix server heroku master
-
-
-#### Deploying Client App on Vercel
-
-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fsalihozdemir%2Fstackoverflow-clone&env=SITE_NAME&envDescription=SITE_NAME%20needed%20for%20api%20url)
-
-- Select client directory 
-- Add heroku api url to SITE_NAME enviorement
-- Finally deploy client application
-
-## :scroll: Todo
-
-- [ ] Add missing components to storybook
-- [ ] Complete missing server tests
-- [ ] Add text editor for post
-
-## :memo: License
-
-This project is made available under the MIT License.
+Fork the repository
+Create a new branch (git checkout -b feature/your-feature-name)
+Make changes and commit them (git commit -am 'Add new feature')
+Push to the branch (git push origin feature/your-feature-name)
+Open a pull request
